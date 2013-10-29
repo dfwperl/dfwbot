@@ -24,7 +24,7 @@ use LWP::Simple qw( get ); # to fetch dictionary definitions from MW
 
 use XML::XML2JSON qw(); # because I hate XML and it is stupid
 
-use JSON::XS qw( decode_json ); # JSON is not stupid
+use JSON::XS qw( decode_json ); # Let's me go from XML -> JSON -> Perl struct
 
 # ------------------------------------------------------------
 # THE BOT
