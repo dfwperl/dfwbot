@@ -125,8 +125,7 @@ sub said
 
       # sometimes the first definition is empty.  *facepalm*  Try the next one
 
-      $def = $defs->[1]->{ '$t' }
-         if length $def =~ /:\s/ && ref $defs eq 'ARRAY';
+      $def = $defs->[1]->{ '$t' } if $def =~ /^:\s/ && ref $defs eq 'ARRAY';
 
       $def = substr $def, 1; # they always add a leading ":".  why clown, why?
 
