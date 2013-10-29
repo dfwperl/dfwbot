@@ -1,0 +1,17 @@
+server: irc.perl.org
+port: 6667
+user: # no username needed - there is no authentication at irc.perl.org
+name: DFW Perl Monger Dictionary Bot
+channels:
+   - bot-test
+   - bots
+nicks:
+   - dict
+   - dictbot
+   - dictionary
+   - dict_bot
+   - dfw_dict_bot
+# please get your own API key from dictionaryapi.com
+api_key: de39f9fa-659b-4634-be74-8e31babfe463
+api_url: http://www.dictionaryapi.com/api/v1/references/collegiate/xml
+debug: 1
