@@ -14,7 +14,7 @@ our $conf = YAML::XS::LoadFile( 'dictbot.yml' );
 
 use Modern::Perl; # turn on strict, warnings, and goodies
 
-package DFWpm::DictionaryBot; # this is a spellchecker IRC bot
+package DFWpm::DictionaryBot; # this is a dictionary lookup IRC bot
 
 use Moo; extends 'Bot::BasicBot'; # the proper way to subclass
 
