@@ -90,7 +90,7 @@ sub said
 
       use Data::Dumper;
 
-      warn Dumper $json if $opt->{debug};
+      warn Dumper $json if $conf->{debug};
 
       # this gets ugly and there's nothing I can do about it.  The XML is
       # absolutely horrific.  Almost nothing sensible comes after this line.
@@ -126,7 +126,7 @@ sub said
       # sometimes the first definition is empty.  *facepalm*  Try the next one
 
       $def = $defs->[1]->{ '$t' }
-         if length $def =~ /:\s*/ && ref $defs eq 'ARRAY';
+         if length $def =~ /:\s/ && ref $defs eq 'ARRAY';
 
       $def = substr $def, 1; # they always add a leading ":".  why clown, why?
 
