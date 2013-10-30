@@ -1,0 +1,48 @@
+package DFWpm::BotPlugin;
+
+# This whole package is black magic.  Don't look at this.
+# All this does is make writing DFWpm bot plugins very easy.
+
+@EXPORT = qw( this_plugin_provides add_plugin_aliases_for provides );
+use Exporter 'import';
+
+use warnings;
+use strict;
+
+my $provides = [ ];
+
+sub provides { @$provides }
+
+sub this_plugin_provides
+{
+   my @commands = @_;
+
+   push @$provides, @commands if @commands;
+
+   return @$provides;
+}
+
+sub add_plugin_aliases_for
+{
+   my ( $method, $aliases ) = @_;
+
+   my $package = ( caller )[0];
+
+   return unless $method && $aliases;
+
+   die 'Invalid plugin_alias. Try plugin_alias command => listref'
+      unless ref $aliases eq 'ARRAY';
+
+   {
+      no strict 'refs';
+
+      for my $alias ( @$aliases )
+      {
+         *{ "$package::$alias" } = sub { $package->$method( @_ ) };
+
+         push @$provides, $alias;
+      }
+   }
+}
+
+1;
