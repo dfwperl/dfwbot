@@ -12,9 +12,9 @@ use Try::Tiny; # save the bot if the bot short circuits! (with try {} catch {})
 
 use LWP::Simple qw( get ); # to fetch dictionary definitions from MW
 
-use XML::XML2JSON qw(); # because I hate XML and it is stupid
+use XML::XML2JSON qw(); # because XML is hard
 
-use JSON::XS qw( decode_json ); # JSON is not stupid
+use JSON::XS qw( decode_json ); # because JSON is easy
 
 # ------------------------------------------------------------
 # SET UP ALIASES FOR THE CORE COMMAND PROVIDED BY THIS PLUGIN
