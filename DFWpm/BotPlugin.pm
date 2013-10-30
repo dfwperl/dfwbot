@@ -2,8 +2,8 @@ package DFWpm::BotPlugin;
 
 use Moose::Role;
 
-# EXPECTED FORMAT: $provides = [ 'nothing' ];
-# EXPECTED FORMAT: $aliases  = { nothing => [ qw( zero zilch nada ) ] };
+# EXPECTED FORMAT: $provides = [ 'something' ];
+# EXPECTED FORMAT: $aliases  = { something => [ qw( some other aliases ) ] };
 
 sub apply_aliases
 {
