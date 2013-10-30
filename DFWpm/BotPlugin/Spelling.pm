@@ -29,11 +29,11 @@ __PACKAGE__->apply_aliases( $aliases );
 
 sub spell
 {
-   my ( $self, $said_object, $arg_str ) = @_;
+   my ( $self, $said_obj, $arg_str ) = @_;
 
    my $conf = $self->plug_conf;
 
-   my ( $who, $what, $to ) = @{ $said_object }{ qw( who body address ) };
+   my ( $who, $what, $to ) = @{ $said_obj }{ qw( who body address ) };
 
    # if called with no argument, there's nothing we can do
 

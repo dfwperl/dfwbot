@@ -24,9 +24,9 @@ __PACKAGE__->apply_aliases( $aliases );
 
 sub greet
 {
-   my ( $self, $said_object, $arg_str ) = @_;
+   my ( $self, $said_obj, $arg_str ) = @_;
 
-   my ( $who, $what, $to ) = @{ $said_object }{ qw( who body address ) };
+   my ( $who, $what, $to ) = @{ $said_obj }{ qw( who body address ) };
 
    return "What's up $who!  So nice to see you online today.";
 }
