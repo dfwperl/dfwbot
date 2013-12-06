@@ -13,6 +13,7 @@ One is a bare-bones bot that takes plugins in the form of Moose roles (examples 
 
 Note to developers: If using Par::Packer (pp) to compile your bot and its plugins, you'll
 need to do it like the example below:
+
     pp -I . \
        -M Bot::BasicBot \
        -M POE::Pipe::TwoWay \
