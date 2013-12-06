@@ -44,7 +44,7 @@ sub plugin_provides
    {
       my $alias_list = $aliases->{ $aliased_cmd };
 
-      warn 'Encountered alformed bot command alias list'
+      warn 'Encountered malformed bot command alias list'
          and next unless ref $alias_list eq 'ARRAY';
 
       push @super_powers, @$alias_list;
